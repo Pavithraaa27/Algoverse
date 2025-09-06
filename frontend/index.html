@@ -1,19 +1,281 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Hackathon Demo</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DealCycle - Welcome</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-  <h2>Hackathon Demo</h2>
-  <form id="Ecommerce for buying and selling">
-    <input type="text" id="title" placeholder="product title" required>
-    <input type="number" id="amount" placeholder="Amount" required>
-    <button type="submit">Add Expense</button>
-  </form>
+    <div class="container">
+        <header class="header">
+            <nav class="navbar">
+                <div class="nav-item">
+                    <a href="#">
+                        <i class="fas fa-home"></i>
+                        <span>Home</span>
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a href="#">
+                        <i class="fas fa-search"></i>
+                        <span>Explore</span>
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a href="#">
+                        <i class="fas fa-bookmark"></i>
+                        <span>Wishlist</span>
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a href="#">
+                        <i class="fas fa-user"></i>
+                        <span>Profile</span>
+                    </a>
+                </div>
+                <div class="nav-item active">
+                    <a href="#">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span>Cart</span>
+                    </a>
+                </div>
+            </nav>
+            <div class="search-bar">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" placeholder="Search your Items here...">
+            </div>
+        </header>
 
-  <pre id="result"></pre>
+        <main class="main-content">
+            <div class="text-section">
+                <h1>Hello! <br> Welcome...</h1>
+                <p class="tagline">BUY-SELL-REPEAT</p>
+            </div>
+            <div class="illustration-section"></div>
+        </main>
 
-  <script src="script.js"></script>
+        <section class="content-section">
+            <div class="category-section">
+                <div class="category-item">
+                    <i class="fas fa-tshirt"></i>
+                    <span>Fashion</span>
+                </div>
+                <div class="category-item">
+                    <i class="fas fa-tv"></i>
+                    <span>Electronics</span>
+                </div>
+                <div class="category-item">
+                    <i class="fas fa-couch"></i>
+                    <span>Furniture</span>
+                </div>
+                <div class="category-item">
+                    <i class="fas fa-book"></i>
+                    <span>Stationary</span>
+                </div>
+                <div class="category-item">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </div>
+                <div class="category-item">
+                    <i class="fas fa-gamepad"></i>
+                    <span>Kids</span>
+                </div>
+                <div class="category-item">
+                    <i class="fas fa-running"></i>
+                    <span>Sports</span>
+                </div>
+                <div class="category-item">
+                    <i class="fas fa-hand-holding-heart"></i>
+                    <span>Donate</span>
+                </div>
+            </div>
+
+            <h2 class="section-title">Recommendation</h2>
+
+            <div class="recommendation-section">
+                <div class="recommendation-card">
+                    <div class="card-image card-image-fashion"></div>
+                    <div class="card-content">
+                        <h3>FASHION</h3>
+                        <p>Beyond the trend, beyond the ordinary.</p>
+                    </div>
+                </div>
+                <div class="recommendation-card">
+                    <div class="card-image card-image-electronics"></div>
+                    <div class="card-content">
+                        <h3>ELECTRONICS</h3>
+                        <p>Technology you can trust.</p>
+                    </div>
+                </div>
+                <div class="recommendation-card">
+                    <div class="card-image card-image-home"></div>
+                    <div class="card-content">
+                        <h3>HOME</h3>
+                        <p>Elevate your space.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="fashion-section">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Fashion!</h1>
+                    <p>Beyond the trend, beyond the ordinary.</p>
+                </div>
+                <div class="hero-image">
+                    <img src="https://i.imgur.com/n1hK3sM.png" alt="Fashion illustration">
+                </div>
+            </div>
+
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://i.imgur.com/k2yQ3uP.png" alt="Vintage Denim Jacket">
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-title">Vintage Denim Jacket</h3>
+                        <div class="rating-price">
+                            <div class="rating">
+                                <i class="fas fa-star"></i> 4.8 <span class="review-count">(4.4k)</span>
+                            </div>
+                            <span class="price">$20</span>
+                        </div>
+                        <p class="product-description">Provides various colors and sizes of shoes.</p>
+                        <div class="product-actions">
+                            <a href="#" class="add-to-cart">Add to cart</a>
+                            <a href="#" class="view-item">
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://i.imgur.com/2s4P09s.png" alt="Tshirts">
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-title">Tshirts</h3>
+                        <div class="rating-price">
+                            <div class="rating">
+                                <i class="fas fa-star"></i> 4.8 <span class="review-count">(4.4k)</span>
+                            </div>
+                            <span class="price">$20</span>
+                        </div>
+                        <p class="product-description">Provides various colors and sizes of shoes.</p>
+                        <div class="product-actions">
+                            <a href="#" class="add-to-cart">Add to cart</a>
+                            <a href="#" class="view-item">
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://i.imgur.com/F3x8fOq.png" alt="Saree">
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-title">Saree</h3>
+                        <div class="rating-price">
+                            <div class="rating">
+                                <i class="fas fa-star"></i> 4.8 <span class="review-count">(4.4k)</span>
+                            </div>
+                            <span class="price">$20</span>
+                        </div>
+                        <p class="product-description">Provides various colors and sizes of shoes.</p>
+                        <div class="product-actions">
+                            <a href="#" class="add-to-cart">Add to cart</a>
+                            <a href="#" class="view-item">
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+                <section class="fashion-section">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Electronics!</h1>
+                    <p>Beyond the trend, beyond the ordinary.</p>
+                </div>
+                <div class="hero-image">
+                    <img src="https://i.imgur.com/n1hK3sM.png" alt="Fashion illustration">
+                </div>
+            </div>
+
+                <div class="product-grid">
+        <div class="product-card">
+            <div class="product-image">
+                <img src="https://i.imgur.com/Q28UjX1.png" alt="iPhone 12">
+            </div>
+            <div class="product-details">
+                <h3 class="product-title">iPhone 12</h3>
+                <div class="rating-price">
+                    <div class="rating">
+                        <i class="fas fa-star"></i> 4.8 <span class="review-count">(4.4k)</span>
+                    </div>
+                    <span class="price">$20</span>
+                </div>
+                <p class="product-description">Provides various colors and sizes of shoes.</p>
+                <a href="#" class="details-link">
+                    <span>See Details</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">
+                <img src="https://i.imgur.com/vHqR9k4.png" alt="Samsung Tablet">
+            </div>
+            <div class="product-details">
+                <h3 class="product-title">Samsung Tablet</h3>
+                <div class="rating-price">
+                    <div class="rating">
+                        <i class="fas fa-star"></i> 4.8 <span class="review-count">(4.4k)</span>
+                    </div>
+                    <span class="price">$20</span>
+                </div>
+                <p class="product-description">Provides various colors and sizes of shoes.</p>
+                <a href="#" class="details-link">
+                    <span>See Details</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">
+                <img src="https://i.imgur.com/m2pP4Tz.png" alt="Gaming Laptop">
+            </div>
+            <div class="product-details">
+                <h3 class="product-title">Gaming Laptop</h3>
+                <div class="rating-price">
+                    <div class="rating">
+                        <i class="fas fa-star"></i> 4.8 <span class="review-count">(4.4k)</span>
+                    </div>
+                    <span class="price">$20</span>
+                </div>
+                <p class="product-description">Provides various colors and sizes of shoes.</p>
+                <a href="#" class="details-link">
+                    <span>See Details</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
