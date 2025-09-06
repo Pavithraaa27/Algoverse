@@ -157,7 +157,7 @@ body {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    background-image: url('https://i.imgur.com/gK5p6T2.png');
+    background-image: url('hero.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center right;
