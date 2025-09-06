@@ -1,0 +1,298 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+:root {
+    --primary-red: #EE4B52;
+    --dark-red: #D73C42;
+    --white: #FFFFFF;
+    --light-gray: #F0F2F5;
+    --dark-blue: #2C3E50;
+    --text-gray: #6C757D;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: var(--primary-red);
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden; /* Hide overflow from background elements */
+}
+
+.container {
+    width: 100%;
+    max-width: 1400px; /* Adjust as needed */
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden; /* Ensure elements don't go outside */
+}
+
+/* Background Elements - adjust positions and sizes as per image */
+.container::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    width: 120%;
+    height: 120%;
+    background-image: url('https://i.imgur.com/kS4lE5m.png'); /* Replace with your background image path */
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.2; /* Adjust opacity */
+    z-index: -1;
+    transform: rotate(5deg);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 10;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+.nav-links a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-links a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav-links .sale-tag {
+    background-color: var(--white);
+    color: var(--primary-red);
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-weight: 700;
+    margin-right: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.logo img {
+    height: 50px;
+    filter: brightness(0) invert(1); /* Makes the logo white */
+}
+
+.main-content {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-grow: 1;
+    padding: 20px 40px;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 5;
+}
+
+.login-card {
+    background-color: var(--white);
+    padding: 40px 50px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 450px;
+    color: var(--dark-blue);
+    position: relative;
+    right: 0;
+}
+
+.login-card h2 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    text-align: center;
+    color: var(--dark-red);
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--text-gray);
+    font-size: 14px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"] {
+    width: calc(100% - 20px);
+    padding: 12px 10px;
+    border: none;
+    background-color: var(--light-gray);
+    border-radius: 10px;
+    font-size: 16px;
+    color: var(--dark-blue);
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group input[type="password"]:focus {
+    outline: none;
+    background-color: var(--white);
+    box-shadow: 0 0 0 3px rgba(238, 75, 82, 0.3);
+}
+
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.form-actions p {
+    font-size: 14px;
+    color: var(--text-gray);
+    margin: 0;
+}
+
+.form-actions p a {
+    color: var(--dark-red);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.form-actions button {
+    background-color: var(--primary-red);
+    color: var(--white);
+    border: none;
+    padding: 15px 30px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 5px 15px rgba(238, 75, 82, 0.3);
+}
+
+.form-actions button:hover {
+    background-color: var(--dark-red);
+    transform: translateY(-2px);
+}
+
+.contact-info {
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 50px;
+    color: var(--white);
+    max-width: 500px;
+    z-index: 5;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.contact-item .icon {
+    width: 30px;
+    height: 30px;
+    filter: invert(1); /* Make icons white */
+}
+
+.contact-item .label {
+    font-weight: 600;
+    margin-bottom: 2px;
+    font-size: 14px;
+}
+
+.contact-item p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .main-content {
+        justify-content: center;
+        padding: 20px;
+    }
+
+    .login-card {
+        right: auto;
+        margin-right: 0;
+    }
+
+    .contact-info {
+        position: static;
+        margin-top: 40px;
+        justify-content: center;
+        width: 100%;
+        max-width: none;
+        padding: 0 20px;
+        box-sizing: border-box;
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px 20px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .nav-links .sale-tag {
+        margin-right: 0;
+    }
+
+    .login-card {
+        padding: 30px;
+    }
+
+    .login-card h2 {
+        font-size: 24px;
+    }
+
+    .form-actions {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .contact-info {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+
+
+
