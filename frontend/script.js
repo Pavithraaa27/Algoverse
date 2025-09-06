@@ -1,3 +1,6 @@
+// =======================
+// Login Form Validation
+// =======================
 document.addEventListener('DOMContentLoaded', () => {
     const loginForm = document.querySelector('.login-card form');
 
@@ -31,8 +34,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             if (isValid) {
-                // If all validations pass, you can then proceed with AJAX submission
-                // or actual form submission to a backend.
                 alert('Form submitted successfully! (This is a demo, no actual submission)');
                 // Here you would typically send data to a server:
                 // loginForm.submit();
@@ -41,17 +42,21 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-
-// Landing Page
-// script.js
-// This file can be used for interactive elements later,
-// such as dynamic search functionality or setting active navigation links.
+// =======================
+// Landing Page - Product Search
+// =======================
 document.addEventListener('DOMContentLoaded', () => {
-    // Example: If you wanted to handle search dynamically
     const searchInput = document.querySelector('.search-bar input');
-    searchInput.addEventListener('input', (event) => {
-        // console.log('Searching for:', event.target.value);
-        // Here you would typically filter a list of items
-        // or send a request to a server.
-    });
+    const products = document.getElementsByClassName('product');
+
+    if (searchInput) {
+        searchInput.addEventListener('input', (event) => {
+            let input = event.target.value.toLowerCase();
+
+            for (let i = 0; i < products.length; i++) {
+                let item = products[i].innerText.toLowerCase();
+                products[i].style.display = item.includes(input) ? "" : "none";
+            }
+        });
+    }
 });
