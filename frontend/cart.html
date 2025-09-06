@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>View Cart</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background: #fff8f6; /* Soft background, adjust as needed */
+        }
+        h1 { text-align: center; }
+        table {
+            width: 60%;
+            margin: 0 auto 20px auto;
+            border-collapse: collapse;
+            box-shadow: 0 2px 8px rgba(240,95,95,0.08);
+            background: #fff;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+        }
+        th { background: #f4f4f4; }
+        .cart-btn {
+            display: block;
+            margin: 10px auto;
+            padding: 10px 30px;
+            background: #f05f5f;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 200px;
+        }
+        .cart-btn:hover { background: #d94c4c; }
+    </style>
+</head>
+<body>
+    <h1>Your Cart</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Item</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Sample Product 1</td>
+                <td>2</td>
+                <td>$10.00</td>
+                <td>$20.00</td>
+            </tr>
+            <tr>
+                <td>Sample Product 2</td>
+                <td>1</td>
+                <td>$15.00</td>
+                <td>$15.00</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3"><strong>Grand Total</strong></td>
+                <td><strong>$35.00</strong></td>
+            </tr>
+        </tfoot>
+    </table>
+    <button class="cart-btn">Confirm</button>
+    <button class="cart-btn">Payment
