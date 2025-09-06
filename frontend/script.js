@@ -1,12 +1,10 @@
-// =======================
-// Login Form Validation
-// =======================
+
 document.addEventListener('DOMContentLoaded', () => {
     const loginForm = document.querySelector('.login-card form');
 
     if (loginForm) {
         loginForm.addEventListener('submit', (event) => {
-            event.preventDefault(); // Prevent default form submission
+            event.preventDefault(); 
 
             const usernameInput = document.getElementById('username');
             const emailInput = document.getElementById('email');
@@ -35,16 +33,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (isValid) {
                 alert('Form submitted successfully! (This is a demo, no actual submission)');
-                // Here you would typically send data to a server:
-                // loginForm.submit();
-            }
         });
     }
 });
 
-// =======================
-// Landing Page - Product Search
-// =======================
 document.addEventListener('DOMContentLoaded', () => {
     const searchInput = document.querySelector('.search-bar input');
     const products = document.getElementsByClassName('product');
