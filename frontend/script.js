@@ -1,16 +1,57 @@
+document.addEventListener('DOMContentLoaded', () => {
+    const loginForm = document.querySelector('.login-card form');
+
+    if (loginForm) {
+        loginForm.addEventListener('submit', (event) => {
+            event.preventDefault(); // Prevent default form submission
+
+            const usernameInput = document.getElementById('username');
+            const emailInput = document.getElementById('email');
+            const passwordInput = document.getElementById('password');
+
+            let isValid = true;
+
+            // Simple validation example
+            if (usernameInput.value.trim() === '') {
+                alert('Please enter your username.');
+                usernameInput.focus();
+                isValid = false;
+            } else if (emailInput.value.trim() === '') {
+                alert('Please enter your email address.');
+                emailInput.focus();
+                isValid = false;
+            } else if (!/\S+@\S+\.\S+/.test(emailInput.value)) { // Basic email regex
+                alert('Please enter a valid email address.');
+                emailInput.focus();
+                isValid = false;
+            } else if (passwordInput.value.trim() === '') {
+                alert('Please enter your password.');
+                passwordInput.focus();
+                isValid = false;
+            }
+
+            if (isValid) {
+                // If all validations pass, you can then proceed with AJAX submission
+                // or actual form submission to a backend.
+                alert('Form submitted successfully! (This is a demo, no actual submission)');
+                // Here you would typically send data to a server:
+                // loginForm.submit();
+            }
+        });
+    }
+});
+
+
+// Landing Page
 // script.js
-document.getElementById("expenseForm").addEventListener("submit", async (e) => {
-  e.preventDefault();
-
-  const title = document.getElementById("title").value;
-  const amount = document.getElementById("amount").value;
-
-  const res = await fetch("http://127.0.0.1:5000/api/expenses", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ title, amount })
-  });
-
-  const data = await res.json();
-  document.getElementById("result").textContent = JSON.stringify(data, null, 2);
+// This file can be used for interactive elements later,
+// such as dynamic search functionality or setting active navigation links.
+document.addEventListener('DOMContentLoaded', () => {
+    // Example: If you wanted to handle search dynamically
+    const searchInput = document.querySelector('.search-bar input');
+    searchInput.addEventListener('input', (event) => {
+        // console.log('Searching for:', event.target.value);
+        // Here you would typically filter a list of items
+        // or send a request to a server.
+    });
 });
