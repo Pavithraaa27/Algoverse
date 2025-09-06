@@ -20,20 +20,19 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    overflow: hidden; /* Hide overflow from background elements */
+    overflow-x: hidden; /* allow vertical scroll but no horizontal */
 }
 
 .container {
     width: 100%;
-    max-width: 1400px; /* Adjust as needed */
-    height: 100vh;
+    max-width: 1400px;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     position: relative;
-    overflow: hidden; /* Ensure elements don't go outside */
+    overflow: hidden; 
 }
 
-/* Background Elements - adjust positions and sizes as per image */
 .container::before {
     content: '';
     position: absolute;
@@ -41,10 +40,10 @@ body {
     left: -50px;
     width: 120%;
     height: 120%;
-    background-image: url('https://i.imgur.com/kS4lE5m.png'); /* Replace with your background image path */
+    background-image: url('https://www.canva.com/design/DAGyLBXZwY8/HItwIFRfPALaKAlalEj7wA/view?utm_content=DAGyLBXZwY8&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h31b582fbb6'); 
     background-size: cover;
     background-repeat: no-repeat;
-    opacity: 0.2; /* Adjust opacity */
+    opacity: 0.2; 
     z-index: -1;
     transform: rotate(5deg);
 }
@@ -56,8 +55,11 @@ body {
     padding: 20px 40px;
     width: 100%;
     box-sizing: border-box;
-    position: relative;
-    z-index: 10;
+    position: fixed; /* fixed header */
+    top: 0;
+    left: 0;
+    background: rgba(238, 75, 82, 0.9); /* semi-transparent red */
+    z-index: 1000;
 }
 
 .nav-links {
@@ -91,7 +93,7 @@ body {
 
 .logo img {
     height: 50px;
-    filter: brightness(0) invert(1); /* Makes the logo white */
+    filter: brightness(0) invert(1);
 }
 
 .main-content {
@@ -99,7 +101,7 @@ body {
     justify-content: flex-end;
     align-items: center;
     flex-grow: 1;
-    padding: 20px 40px;
+    padding: 120px 40px 40px; /* extra top padding for fixed header */
     box-sizing: border-box;
     position: relative;
     z-index: 5;
@@ -217,7 +219,7 @@ body {
 .contact-item .icon {
     width: 30px;
     height: 30px;
-    filter: invert(1); /* Make icons white */
+    filter: invert(1);
 }
 
 .contact-item .label {
@@ -231,11 +233,11 @@ body {
     font-size: 14px;
 }
 
-/* Responsive Adjustments */
+/* Responsive */
 @media (max-width: 992px) {
     .main-content {
         justify-content: center;
-        padding: 20px;
+        padding: 120px 20px 20px;
     }
 
     .login-card {
@@ -292,7 +294,24 @@ body {
     }
 }
 
+/* =========================
+   Sections for Navigation
+========================= */
+.section {
+    min-height: 100vh;
+    padding: 120px 40px 40px;
+    box-sizing: border-box;
+    scroll-margin-top: 100px; /* offset for fixed header */
+    background: rgba(255,255,255,0.05);
+    color: var(--white);
+}
 
+html {
+    scroll-behavior: smooth;
+}
 
-
-
+/* Highlight active nav link */
+.nav-links a.active {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
